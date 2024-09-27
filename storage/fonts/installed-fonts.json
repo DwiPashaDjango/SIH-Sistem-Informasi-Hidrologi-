@@ -1,0 +1,15 @@
+{
+    "nunito": {
+        "normal": "C:\\laragon\\www\\Cv Agarta\\laravel.hkabwssumvi.com\\laravel.hkabwssumvi.com\\storage\\fonts\/nunito_normal_374effabe77ac14345ee83bc1b606052",
+        "600": "C:\\laragon\\www\\Cv Agarta\\laravel.hkabwssumvi.com\\laravel.hkabwssumvi.com\\storage\\fonts\/nunito_600_7d2d9ce6e2976f6c6de8a716b3f1b22f",
+        "bold": "C:\\laragon\\www\\Cv Agarta\\laravel.hkabwssumvi.com\\laravel.hkabwssumvi.com\\storage\\fonts\/nunito_bold_02b86a5b11497474484a2bf6e0d98549",
+        "800": "nunito_800_5308342b04b0a4475f6dedc6f2d6b2c8"
+    },
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_6f1daf97ca2dbe4428e37588bc8d3c27"
+    },
+    "font awesome 5 free": {
+        "normal": "C:\\laragon\\www\\Cv Agarta\\laravel.hkabwssumvi.com\\laravel.hkabwssumvi.com\\storage\\fonts\/font_awesome_5_free_normal_014b1652a18be3525d86c9de30653fa8",
+        "900": "font_awesome_5_free_900_b713adf56e7e909eb21e772d631137d6"
+    }
+}
