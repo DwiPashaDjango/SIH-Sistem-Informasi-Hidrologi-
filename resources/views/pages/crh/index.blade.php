@@ -126,13 +126,13 @@
                         let html = `<li class="text-white list-group-item" style="background-color: rgb(10, 71, 147)">Daftar Pos :</li>`;
                         $.each(data.data, function(index, value) {
                             let bgStatus = '';
-                            if (value.status === 'Normal') {
+                            if (value.status === 'Hujan Ringan') {
                                 bgStatus += 'rgb(80, 200, 120)';
-                            } else if(value.status === 'Waspada') {
+                            } else if(value.status === 'Hujan Sedang') {
                                 bgStatus += 'rgb(228, 208, 10)';
-                            } else if(value.status === 'Siaga') {
+                            } else if(value.status === 'Hujan Lebat') {
                                 bgStatus += 'rgb(255, 140, 0)';
-                            } else if(value.status === 'Awas') {
+                            } else if(value.status === 'Hujan Sangat Lebat') {
                                 bgStatus += 'rgb(255, 87, 51)';
                             } else {
                                 bgStatus += 'rgb(80, 200, 120)';
@@ -151,7 +151,7 @@
                                         <div class="p-4 show-detail d-none">
                                             <div>
                                                 <div class="mt-2 p-1" style="background-color: ${bgStatus};">
-                                                    <h6><strong>${cardText} : ${value.nilai} cm</strong></h6>
+                                                    <h6><strong>${value.status} : ${value.nilai} cm</strong></h6>
                                                 </div>
                                                 <div class="mt-2 row">
                                                     <div class="col" style="background-color: rgb(80, 200, 120); height: 20px;"></div>
@@ -224,16 +224,16 @@
                         let iconUrl = '';
                         let textCard = '';
 
-                        if (marker.status === 'Normal') {
+                        if (marker.status === 'Hujan Ringan') {
                             statusColor += 'background-color: rgb(80, 200, 120);';
                             iconUrl = "{{asset('img/marker-icon-2x-green.png')}}";
-                        } else if(marker.status === 'Waspada') {
+                        } else if(marker.status === 'Hujan Sedang') {
                             statusColor += 'background-color: rgb(228, 208, 10);';
                             iconUrl = "{{asset('img/marker-icon-2x-yellow.png')}}"; 
-                        } else if(marker.status === 'Siaga') {
+                        } else if(marker.status === 'Hujan Lebat') {
                             statusColor += 'background-color: rgb(255, 140, 0);';
                             iconUrl = "{{asset('img/marker-icon-2x-orange.png')}}"; 
-                        } else if(marker.status === 'Awas') {
+                        } else if(marker.status === 'Hujan Sangat Lebat') {
                             statusColor += 'background-color: rgb(255, 87, 51);';
                             iconUrl = "{{asset('img/marker-icon-2x-red.png')}}"; 
                         }
@@ -274,7 +274,7 @@
                                                             <img src="${marker.gambar}" alt="default" width="400" class="img-fluid">
                                                             <div>
                                                                 <div class="mt-2 p-1" style="${statusColor}">
-                                                                    <h6><strong>${textCard} : ${marker.nilai} mm</strong></h6>
+                                                                    <h6><strong>${marker.status} : ${marker.nilai} mm</strong></h6>
                                                                 </div>
                                                                 <div>
                                                                     <div class="mt-2 row">
@@ -308,13 +308,13 @@
                 geoJsonLayer = L.geoJSON(geojson, {
                     pointToLayer: function(feature, latlng) {
                         let iconUrl = '';
-                        if (feature.properties.status === 'Normal') {
+                        if (feature.properties.status === 'Hujan Ringan') {
                             iconUrl = "{{asset('img/marker-icon-2x-green.png')}}";
-                        } else if (feature.properties.status === 'Waspada') {
+                        } else if (feature.properties.status === 'Hujan Sedang') {
                             iconUrl = "{{asset('img/marker-icon-2x-yellow.png')}}"; 
-                        } else if (feature.properties.status === 'Siaga') {
+                        } else if (feature.properties.status === 'Hujan Lebat') {
                             iconUrl = "{{asset('img/marker-icon-2x-orange.png')}}"; 
-                        } else if (feature.properties.status === 'Awas') {
+                        } else if (feature.properties.status === 'Hujan Sangat Lebat') {
                             iconUrl = "{{asset('img/marker-icon-2x-red.png')}}"; 
                         }
 
