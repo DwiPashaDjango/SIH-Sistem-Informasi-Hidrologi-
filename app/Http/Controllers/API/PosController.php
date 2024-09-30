@@ -655,7 +655,9 @@ class PosController extends Controller
                 $hujan_biasa = $data->hujan_biasa;
             }
 
-            if ($hujan_biasa > 0 && $hujan_biasa >= $value->normal) {
+            if ($hujan_biasa == 0) {
+                $status = "Hujan Ringan";
+            } else if ($hujan_biasa <= $value->normal) {
                 $status = "Hujan Ringan";
             } else if ($hujan_biasa <= $value->waspada) {
                 $status = "Hujan Sedang";
@@ -666,6 +668,7 @@ class PosController extends Controller
             } else {
                 $status = "Hujan Sangat Lebat";
             }
+
 
             if ($hujan_biasa >= $hujan_otomatis) {
                 $nilai = $hujan_biasa;
