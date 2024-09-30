@@ -657,13 +657,13 @@ class PosController extends Controller
 
             if ($hujan_biasa == 0) {
                 $status = "Hujan Ringan";
-            } else if ($hujan_biasa <= $value->normal) {
+            } else if ($hujan_biasa >= $value->normal) {
                 $status = "Hujan Ringan";
-            } else if ($hujan_biasa <= $value->waspada) {
+            } else if ($hujan_biasa >= $value->waspada) {
                 $status = "Hujan Sedang";
-            } else if ($hujan_biasa <= $value->siaga) {
+            } else if ($hujan_biasa >= $value->siaga) {
                 $status = "Hujan Lebat";
-            } else if ($hujan_biasa <= $value->awas) {
+            } else if ($hujan_biasa >= $value->awas) {
                 $status = "Hujan Sangat Lebat";
             } else {
                 $status = "Hujan Sangat Lebat";
