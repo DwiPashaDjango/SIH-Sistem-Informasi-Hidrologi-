@@ -663,8 +663,6 @@ class PosController extends Controller
                 $status = "Hujan Lebat";
             } else if ($hujan_biasa >= 100) {
                 $status = "Hujan Sangat Lebat";
-            } else {
-                $status = "Tidak Ada Hujan";
             }
 
 
